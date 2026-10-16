@@ -432,20 +432,6 @@ section { padding: 96px 0; }
 .about-college .college-name { font-size: .95rem; font-weight: 600; color: var(--deep-teal); }
 .about-college .college-sub  { font-size: .8rem; color: var(--text-muted); margin-top: 2px; }
 
-/* ===================== DISCLAIMER ===================== */
-.disclaimer-banner {
-  background: #fffbeb;
-  border: 1px solid #f59e0b;
-  border-radius: var(--radius-sm);
-  padding: 14px 20px;
-  margin-top: 28px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.disclaimer-banner .d-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
-.disclaimer-banner p { font-size: .82rem; color: #92400e; line-height: 1.6; }
-
 /* ===================== SERVICES ===================== */
 #services { background: var(--white); }
 .services-grid {
@@ -1072,8 +1058,6 @@ footer .footer-note { font-size: .78rem; opacity: .65; max-width: 520px; margin:
   .about-college .college-icon { font-size: 1.4rem; }
   .about-college .college-name { font-size: .85rem; }
   .about-college .college-sub  { font-size: .72rem; }
-  .disclaimer-banner { padding: 10px 12px; }
-  .disclaimer-banner p { font-size: .76rem; }
   .section-title { font-size: 1.3rem; }
   .contact-form { padding: 18px 12px; }
   .faq-question { font-size: .82rem; padding: 12px 12px; }
