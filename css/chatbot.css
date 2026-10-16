@@ -321,9 +321,25 @@
     right: 0; left: 0;
     bottom: 0;
     width: 100%;
-    max-height: 78vh;
+    max-height: 80vh;
     border-radius: 20px 20px 0 0;
     border-bottom: none;
   }
-  #cbTrigger { bottom: 148px; right: 20px; }
+  /* Shift trigger left so it doesn't overlap floatingWA / scrollTop */
+  #cbTrigger { bottom: 144px; right: 16px; }
+}
+
+@media (max-width: 425px) {
+  #cbTrigger { bottom: 136px; right: 16px; }
+}
+
+@media (max-width: 375px) {
+  #cbTrigger { bottom: 132px; right: 16px; }
+  /* Slightly smaller trigger for very small phones */
+  #cbTrigger { width: 48px; height: 48px; }
+}
+
+@media (max-width: 320px) {
+  #cbTrigger { bottom: 128px; right: 12px; width: 44px; height: 44px; }
+  #cbTrigger svg { width: 22px; height: 22px; }
 }
