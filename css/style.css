@@ -158,6 +158,63 @@ nav {
 }
 .nav-cta:hover { background: var(--teal-light) !important; }
 
+/* ── Language Toggle ── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+}
+.lang-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,.35);
+  border-radius: 6px;
+  color: rgba(255,255,255,.7);
+  font-family: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1.4;
+  min-height: 30px;
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.65);
+  color: var(--white);
+}
+.lang-btn.lang-active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+.lang-btn:focus-visible { outline: 2px solid var(--teal-light); outline-offset: 2px; }
+.lang-sep { color: rgba(255,255,255,.3); font-size: .75rem; user-select: none; }
+
+/* Gujarati font override when gu is active */
+html[lang="gu"] body,
+html[lang="gu"] .hero-badge,
+html[lang="gu"] .hero-headline,
+html[lang="gu"] .hero-intro,
+html[lang="gu"] .section-title,
+html[lang="gu"] .section-desc,
+html[lang="gu"] .service-title,
+html[lang="gu"] .service-desc,
+html[lang="gu"] .stat-value,
+html[lang="gu"] .stat-label,
+html[lang="gu"] .faq-question,
+html[lang="gu"] .faq-answer-inner,
+html[lang="gu"] .contact-info-label,
+html[lang="gu"] .contact-info-value,
+html[lang="gu"] .footer-qual,
+html[lang="gu"] .footer-note,
+html[lang="gu"] [data-i18n] {
+  font-family: 'Noto Sans Gujarati', 'Inter', sans-serif;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;
@@ -667,7 +724,6 @@ section { padding: 96px 0; }
   margin-bottom: 4px;
 }
 .contact-info-value { font-size: .95rem; color: var(--text-dark); font-weight: 500; }
-.contact-info-value.placeholder { color: var(--text-muted); font-style: italic; }
 .contact-btns {
   display: flex;
   gap: 12px;
@@ -955,6 +1011,8 @@ footer .footer-note { font-size: .78rem; opacity: .65; max-width: 520px; margin:
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   nav .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  /* keep lang toggle visible beside hamburger on tablet */
+  .lang-toggle { margin-left: 4px; }
   /* Tighten section vertical padding */
   section { padding: 80px 0; }
 }
